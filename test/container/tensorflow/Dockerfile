@@ -4,6 +4,8 @@ COPY dummy/sagemaker_training.tar.gz /sagemaker_training.tar.gz
 
 RUN ${PIP} install --no-cache-dir \
    /sagemaker_training.tar.gz
+   
+RUN pip install --no-cache-dir --upgrade protobuf==5.29.5
 
 RUN rm /sagemaker_training.tar.gz
 
